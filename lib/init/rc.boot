@@ -4,7 +4,7 @@
 # Shared code between boot/shutdown.
 . /usr/lib/init/rc.lib
 
-log "Welcome to KISS!"
+log "Welcome to Glasnost!"
 
 log "Mounting pseudo filesystems..."; {
     mnt nosuid,noexec,nodev    proc     proc /proc
@@ -90,7 +90,7 @@ log "Setting up loopback..."; {
 
 log "Setting hostname..."; {
     read -r hostname < /etc/hostname
-    printf %s "${hostname:-KISS}" > /proc/sys/kernel/hostname
+    printf %s "${hostname:-Glasnost}" > /proc/sys/kernel/hostname
 } 2>/dev/null
 
 log "Loading sysctl settings..."; {
